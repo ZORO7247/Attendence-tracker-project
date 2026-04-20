@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Attendance Viewer</h1>
+            <p class="subtitle">Track and monitor student performance</p>
+        </header>
+
+        <div class="controls">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Students</button>
+                <button class="filter-btn" data-filter="present">Present</button>
+                <button class="filter-btn" data-filter="absent">Absent</button>
+            </div>
+            
+            <div class="toggle-container">
+                <label class="toggle-label">
+                    <input type="checkbox" id="lowAttendanceToggle">
+                    <span>Show &lt;75% attendance only</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="sort-controls">
+            <button class="sort-btn" id="sortBtn">Sort by Attendance %</button>
+        </div>
+
+        <div id="loadingMessage" class="loading">Loading students...</div>
+        <div id="emptyMessage" class="empty-state" style="display: none;">No students found</div>
+
+        <div class="student-list" id="studentList"></div>
+
+        <div class="student-details" id="studentDetails" style="display: none;">
+            <h3>Student Details</h3>
+            <div id="detailsContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
